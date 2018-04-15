@@ -31,10 +31,7 @@ public class AboutMeActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
 
 
-
-
-
-    }
+        }
 
 
 
