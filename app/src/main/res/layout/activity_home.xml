@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    tools:context="com.juborajsarker.ipcalculatorpro.HomeActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="4dp"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="IPv4 network address"
+                        android:padding="6dp"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/first_octate_ET"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:maxLength="3"
+                        android:maxLines="1"
+                        android:inputType="number"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="."
+                        android:textSize="18sp"/>
+
+                    <EditText
+                        android:id="@+id/second_octate_ET"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:maxLength="3"
+                        android:maxLines="1"
+                        android:inputType="number"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="."
+                        android:textSize="18sp"/>
+
+                    <EditText
+                        android:id="@+id/third_octate_ET"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:maxLength="3"
+                        android:maxLines="1"
+                        android:inputType="number"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="."
+                        android:textSize="18sp"/>
+
+                    <EditText
+                        android:id="@+id/fourth_octate_ET"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:maxLength="3"
+                        android:maxLines="1"
+                        android:layout_marginRight="10dp"
+                        android:inputType="number" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:layout_marginTop="10dp"
+                        android:textSize="30sp"/>
+
+
+                    <EditText
+                        android:id="@+id/cidr_value_ET"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:maxLength="2"
+                        android:maxLines="1"
+                        android:inputType="number"
+                        android:hint="@string/cidr_value"
+                        android:textColorHint="#ccc"/>
+
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/calculate_BTN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Calculate"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginTop="5dp"
+                    android:onClick="calculate" />
+
+                <TextView
+                    android:id="@+id/invalid_message_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#f60000"/>
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Decimal Notation"
+                            android:textSize="18sp"
+                            android:padding="8dp"
+                            android:gravity="center"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/edit_text_design">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Network"
+                                    android:paddingLeft="5dp"
+                                    android:paddingBottom="5dp"
+                                    android:layout_marginRight="1dp"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp" />
+
+                                <TextView
+                                    android:id="@+id/decimal_network_TV"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2.5"
+                                    android:paddingLeft="5dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:textColor="#000"
+                                    android:paddingBottom="5dp"/>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/edit_text_design">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Subnet Mask"
+                                    android:paddingLeft="5dp"
+                                    android:paddingBottom="5dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_marginRight="1dp"
+                                    android:layout_marginLeft="1dp" />
+
+                                <TextView
+                                    android:id="@+id/decimal_subnet_TV"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2.5"
+                                    android:paddingLeft="5dp"
+                                    android:textColor="#000"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:paddingBottom="5dp"/>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/edit_text_design">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="First host"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_marginRight="1dp"
+                                    android:layout_marginLeft="1dp"
+                                    android:paddingLeft="5dp"
+                                    android:paddingBottom="5dp"/>
+
+                                <TextView
+                                    android:id="@+id/decimal_first_host_TV"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2.5"
+                                    android:paddingLeft="5dp"
+                                    android:textColor="#000"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:paddingBottom="5dp"/>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/edit_text_design">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Last host"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_marginRight="1dp"
+                                    android:layout_marginLeft="1dp"
+                                    android:paddingLeft="5dp"
+                                    android:paddingBottom="5dp"/>
+
+                                <TextView
+                                    android:id="@+id/decimal_last_host_TV"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2.5"
+                                    android:paddingLeft="5dp"
+                                    android:textColor="#000"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:paddingBottom="5dp"/>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/edit_text_design">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Broadcast"
+                                    android:paddingLeft="5dp"
+                                    android:paddingBottom="5dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_marginRight="1dp"
+                                    android:layout_marginLeft="1dp" />
+
+                                <TextView
+                                    android:id="@+id/decimal_broadcast_TV"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2.5"
+                                    android:paddingLeft="5dp"
+                                    android:textColor="#000"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:paddingBottom="5dp"/>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:paddingBottom="5dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Binary Notation"
+                            android:textSize="18sp"
+                            android:padding="8dp"
+                            android:gravity="center"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/edit_text_design">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Network"
+                                    android:layout_marginRight="1dp"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:paddingLeft="5dp"
+                                    android:paddingBottom="5dp"
+                                    android:layout_gravity="center"/>
+
+                                <TextView
+                                    android:id="@+id/binary_network_TV"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2.5"
+                                    android:paddingLeft="5dp"
+                                    android:textColor="#000"
+                                    android:layout_marginRight="1dp"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:paddingBottom="5dp"/>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/edit_text_design">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Subnet Mask"
+                                    android:paddingLeft="5dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="1dp"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:paddingBottom="5dp" />
+
+                                <TextView
+                                    android:id="@+id/binary_subnet_TV"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2.5"
+                                    android:paddingLeft="5dp"
+                                    android:textColor="#000"
+                                    android:layout_marginRight="1dp"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:paddingBottom="5dp"/>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/edit_text_design">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="First host"
+                                    android:layout_gravity="center"
+                                    android:paddingLeft="5dp"
+                                    android:layout_marginRight="1dp"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:paddingBottom="5dp"/>
+
+                                <TextView
+                                    android:id="@+id/binary_first_host_TV"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2.5"
+                                    android:paddingLeft="5dp"
+                                    android:layout_marginRight="1dp"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:textColor="#000"
+                                    android:paddingBottom="5dp"/>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/edit_text_design">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Last host"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="1dp"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:paddingLeft="5dp"
+                                    android:paddingBottom="5dp"/>
+
+                                <TextView
+                                    android:id="@+id/binary_last_host_TV"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2.5"
+                                    android:paddingLeft="5dp"
+                                    android:textColor="#000"
+                                    android:layout_marginRight="1dp"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:paddingBottom="5dp"/>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/edit_text_design">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Broadcast"
+                                    android:layout_gravity="center"
+                                    android:paddingLeft="5dp"
+                                    android:layout_marginRight="1dp"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:paddingBottom="5dp"/>
+
+                                <TextView
+                                    android:id="@+id/binary_broadcast_TV"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2.5"
+                                    android:paddingLeft="5dp"
+                                    android:textColor="#000"
+                                    android:layout_marginRight="1dp"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:paddingBottom="5dp"/>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

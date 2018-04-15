@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">IP Calculator Pro</string>
+
+    <string name="cidr_value"><font size="15">CIDR</font></string>
+
+
+    <string name="title_activity_second_activiy">Interstitial</string>
+    <string name="msg_welcome">Welcome to Admob. Click on the below button to launch the Interstitial ad.</string>
+    <string name="btn_fullscreen_ad">Show Fullscreen Ad</string>
+
+
+    <string name="juboraj_sarker"><u>Juboraj Sarker</u></string>
+
+
+    <string name="banner_home_footer">ca-app-pub-5809082953640465/2329950412</string>
+
+
+    <string name="interstitial_full_screen1">ca-app-pub-5809082953640465/2610997924</string>
+
+
+</resources>
